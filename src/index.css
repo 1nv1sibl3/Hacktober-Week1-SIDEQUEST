@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-parchment: #FAF7F2;
+    --bg-card: #FFFFFF;
+    --border-subtle: #E7E0D5;
+    --border-strong: #C4B9A7;
+    --text-primary: #1C2621;
+    --text-secondary: #57635C;
+    --text-muted: #849188;
+    --pine-deep: #163324;
+    --pine-moss: #2E5339;
+    --amber-warm: #C87D32;
+    --amber-soft: #F9EFE6;
+    --sage-light: #EBF2EC;
+  }
+
+  .dark {
+    --bg-parchment: #0E1511;
+    --bg-card: #15201A;
+    --border-subtle: #24352B;
+    --border-strong: #3D5546;
+    --text-primary: #E8EDE9;
+    --text-secondary: #A3B5AA;
+    --text-muted: #72857A;
+    --pine-deep: #2A563C;
+    --pine-moss: #3E7352;
+    --amber-warm: #E08C3E;
+    --amber-soft: #281D14;
+    --sage-light: #1A2820;
+  }
+
+  body {
+    background-color: var(--bg-parchment);
+    color: var(--text-primary);
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+.font-editorial {
+  font-family: 'Fraunces', Georgia, Cambria, 'Times New Roman', Times, serif;
+}
+
+.font-mono-journal {
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+/* Field note paper texture effect */
+.field-paper {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  box-shadow: 0 1px 3px rgba(22, 51, 36, 0.04), 0 4px 12px rgba(22, 51, 36, 0.03);
+}
+
+.field-paper-elevated {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-strong);
+  box-shadow: 0 4px 6px -1px rgba(22, 51, 36, 0.06), 0 10px 24px -3px rgba(22, 51, 36, 0.08);
+}
+
+/* Subtle grid line for journal note feel */
+.journal-ruled {
+  background-image: linear-gradient(var(--border-subtle) 1px, transparent 1px);
+  background-size: 100% 28px;
+  line-height: 28px;
+}
